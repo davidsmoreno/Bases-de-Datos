@@ -1,5 +1,6 @@
-#include<iostream>
-#include<vector>
+
+
+
 
 using namespace std;
 
@@ -12,40 +13,7 @@ private:
   struct BO{
     int id;
 
-
-    struct BR{
-      vector<string> fields
-      vector<string> fieldValues;
-
-
-
-    };
-
-  };
-
-public:
-
-
-
-
-
-
-#include<iostream>
-#include<vector>
-#include<string>
-
-using namespace std;
-
-class BOT{
-private:
-  BO *tuples;
-  vector<string> fields;
-  int num_r;
-
-  struct BO{
-    int id;
-
-    BO(){}
+    BO(){id = 0;}
     BO(int idx){
       id = idx;
     }
@@ -68,14 +36,61 @@ private:
 
 
 
-    struct BR{
+    struct BRegister public of BO{
       vector<string> fields
-      vector<vector<string>> fieldValues;//será vector de vectores??
+      vector<string> fieldValues;//será vector de vectores??
 
-      BOR();
-      BOR(int id);
-
-
+      public BRegister(){
+        fields = vector<string>();
+        fieldValues = vector<string>();
+      }
+      public BRegister(int index){
+        super(index);
+        fields = vector<string>();
+        fieldValues = vector<string>();
+      }
+      void addField(String fieldName){
+        int index = fieldIndex(fieldName);
+        if(index != -1){
+          cout << "field already in register";
+        }else{
+          fields.push_back(fieldName);
+        }
+      }
+      void setFieldValue(string fieldName,string fieldValue){
+        int index = fieldIndex(fieldName);
+        if(index == -1){
+          cout << "Register Error: field not found";
+        }else{
+          fieldValues[index] = fieldValue;
+        }
+      }
+      public string getContentAsString(){
+        string content = "";
+        for(int i=0;i<fieldValues.size();i++){
+          content += fieldValues[i];
+          if(i<fieldValues.size()-1)
+            content += ",";
+        }
+        return content;
+      }
+      int fieldIndex(string nomField){
+        int index = -1;
+        for(int i=0;i<fields.size();i++){
+          if(fields[i] == nomField){
+            index = i;
+          }
+        }
+        return index;
+      }
+      String getFieldValue2(String fieldName){
+        int index = fieldIndex(fieldName);
+        if(index == -1){
+          return "Registry Error: field not found";
+        }else{
+          return fieldsValues[index];
+        }
+      }
       string getFieldValue(string f){//le paso un value y quiero saber en que field está
         int idx;
         for(int i = 0;i<this.fieldValues.size();i++){
@@ -108,7 +123,3 @@ private:
 public:
 
 };
-};
-
-
-
