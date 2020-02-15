@@ -38,8 +38,14 @@ public:
     vector<string> fieldsValues;
 
 
-
-    BRegister(int idx):BO(idx){}
+    BRegister():BO(){
+        fields.push_back("ID");
+        fieldsValues.push_back(to_string(BO::id));
+    }
+    BRegister(int idx):BO(idx){
+        fields.push_back("ID");
+        fieldsValues.push_back(to_string(BO::id));
+    }
 
     int fieldIndex(string field){
         int idx = -1;
