@@ -92,5 +92,23 @@ public:
         }
         return content;
     }
+    int isFieldComparedTo(string fieldName,string compareTo){
+        fieldName=getFieldValue(fieldName);
+        compareTo=getFieldValue(compareTo);
+        if(fieldName.size()==compareTo.size()){
+            for(int i=0;i<fieldName.size();i++){
+                if(fieldName[i]==compareTo[i]){
+                    return 0;
+
+                }
+                return 1;
+            }
+
+        }
+        else{
+            return -1;
+        }
+    }
 
 };
+
