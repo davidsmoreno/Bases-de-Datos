@@ -50,4 +50,11 @@ public:
             }
         }
     }
+    vector<string> getFieldsVals(vector<string> flds){
+    vector<string> vec;
+    for(unsigned int i = 0; i < registers.size();i++){
+        vec.push_back(registers[i].getFieldValue)();
+    }
+    return vec;
+}
 };
