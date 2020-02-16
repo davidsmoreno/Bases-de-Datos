@@ -42,5 +42,7 @@ public:
     void setFieldValue(string value, string Field);
     string getFieldValue(string Field);
     void printRegister();
+    bool isFieldEqualTo(string fieldName,string compareTo);
+    int isFieldComparedTo(string fieldName,string compareTo);
 };
 #endif;
