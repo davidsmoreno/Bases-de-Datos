@@ -61,14 +61,11 @@ string BRegister::getFieldValue(string Field){//en este field retorno el value
     } 
 }
 
-string BRegister::getRegister(){
-    string content = " ";
+void BRegister::printRegister(){
     if(fieldsValues.size() == 0)
         cout<<"Register Error: empty register.";
     else{
-        for(unsigned int i = 0;i<fieldsValues.size();i++ ){
-            content += fieldsValues[i] + ",";
-        }
+        for(unsigned int i = 0;i<fieldsValues.size();i++ )
+            cout<< fieldsValues[i]<<'\t';
     }
-    return content;
 }

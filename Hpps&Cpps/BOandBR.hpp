@@ -1,3 +1,4 @@
+  
 #ifndef _BOandBR_hpp_
 #define _BOandBR_hpp_
 
@@ -40,6 +41,6 @@ public:
     void addField(string newField);
     void setFieldValue(string value, string Field);
     string getFieldValue(string Field);
-    string getRegister();
+    void printRegister();
 };
 #endif;

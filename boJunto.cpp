@@ -9,9 +9,7 @@ public:
     int id;
 
     BO(){id = 0;}
-    BO(int idx){
-      id = idx;
-    }
+    BO(int idx){id = idx;}
 
 
     int compareTo(BO bo){
