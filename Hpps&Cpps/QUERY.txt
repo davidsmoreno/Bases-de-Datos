@@ -1,0 +1,6 @@
+READ    table1.csv
+READ    table2.csv
+SELECT  ID, Name, Dept_Name, Salary
+FROM    table1.csv
+WHERE   Salary > 85000
+

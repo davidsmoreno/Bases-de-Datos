@@ -28,14 +28,8 @@ public:
     vector<string> fields;
     vector<string> fieldsValues;
 
-    BRegister():BO(){
-        fields.push_back("ID");
-        fieldsValues.push_back(to_string(BO::id));
-    }
-    BRegister(int idx):BO(idx){
-        fields.push_back("ID");
-        fieldsValues.push_back(to_string(BO::id));
-    }
+    BRegister():BO(){}
+    BRegister(int idx):BO(idx){}
 
     int fieldIndex(string field);
     void addField(string newField);
