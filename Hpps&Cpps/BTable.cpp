@@ -14,7 +14,9 @@ void BTable::addRegister(vector<string> values){
     else{
         for(unsigned int i = 0; i<values.size();i++){
             registro.addField(fields[i]);
-            registro.setFieldValue(fields[i], values[i]);
+        }
+        for(unsigned int j = 0;j<values.size();j++){
+            registro.setFieldValue(values[j], fields[j]);
         }
     registers.push_back(registro);
     numObjects++;

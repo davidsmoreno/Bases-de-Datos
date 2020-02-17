@@ -10,6 +10,8 @@ using namespace std;
 void Creation(){
     vector<string> header{"ID", "Name", "Dep_Name", "Salary"};
     BTable BT(header);
+    vector<string> user{"001","Sara","Science","5000"};
+    BT.addRegister(user);
     BT.printTable();
 }
 

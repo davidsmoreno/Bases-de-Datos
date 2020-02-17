@@ -41,15 +41,18 @@ void BRegister::addField(string newField){
         cout<<"Register Error: Field already exists";
     else{
         fields.push_back(newField);
+        cout<<"Field added"<<'\n';
     }
 }
 
 void BRegister::setFieldValue(string value, string Field){
+    cout<<"setting field value."<<'\n';
     int idx = fieldIndex(Field);
     if(idx == -1)
         cout<<"Register Error: Field doesn't exist.";
     else{
         fieldsValues[idx] = value;
+        cout<<"Value added"<<'\n';
     }
 }
 
