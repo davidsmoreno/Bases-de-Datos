@@ -7,12 +7,10 @@
 
 using namespace std;
 
-BTable Creation(){
+void Creation(){
     vector<string> header{"ID", "Name", "Dep_Name", "Salary"};
     BTable BT(header);
-
-    return BT;
-
+    BT.printTable();
 }
 
 int main(){
@@ -31,6 +29,8 @@ int main(){
         cout<<vec[i]<<'\n';
     if(vec.size()<5)
         cout<<"File Error: Not enough information"<<'\n';
+
+    Creation();
 
     return 0;
 }
