@@ -71,27 +71,29 @@ void BRegister::printRegister(){
 }
 
 int BRegister::isFieldComparedTo(string fieldName,string compareTo){
+    int idx = -1;
     fieldName=getFieldValue(fieldName);
     compareTo=getFieldValue(compareTo);
     if(fieldName.size()==compareTo.size()){
-        for(int i=0;i<fieldName.size();i++){
+        for(unsigned int i=0;i<fieldName.size();i++){
             if(fieldName[i]==compareTo[i])
-                return 0;
-            return 1;
+                idx =  0;
+            idx = 1;
         }
     }
-    else return -1;
+    return idx;
 }
 
 bool BRegister::isFieldEqualTo(string fieldName,string compareTo){
+    bool res = false;
     string fieldvalue = getFieldValue(fieldName);
     string comparevalue = getFieldValue(compareTo);
     if(fieldvalue.size() == comparevalue.size()){
-        for(int i = 0; i<fieldvalue.size();i++){
+        for(unsigned int i = 0; i<fieldvalue.size();i++){
             if(fieldvalue[i] == comparevalue[i])
-                return true;            
+                res = true;            
         }
-    }else
-        return false;
+    }
+    return res;
     
 }

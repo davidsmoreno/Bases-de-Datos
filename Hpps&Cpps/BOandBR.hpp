@@ -39,4 +39,4 @@ public:
     bool isFieldEqualTo(string fieldName,string compareTo);
     int isFieldComparedTo(string fieldName,string compareTo);
 };
-#endif;
+#endif

@@ -30,16 +30,26 @@ void BTable::printTable(){
         }
         cout<<'\n';
         for(unsigned int j = 0;j < registers.size();j++){
-            registers[j].printRegister;
+            registers[j].printRegister();
             cout<<'\n';
         }
     }
 }
 
-vector<string> BTable::getFieldsVals(vector<string> flds){
-    vector<string> vec;
-    for(unsigned int i = 0; i < registers.size();i++){
-        vec.push_back(registers[i].getFieldValue)();
+string BTable::getField(string fld){
+    string vals = " ";
+    for (unsigned int i = 0; i < registers.size();i++){
+        vals+=registers[i].getFieldValue(fld);
+        vals+=",";
     }
-    return vec;
+    return vals;
+}
+
+vector<string> BTable::getFieldsVals(vector<string> flds){
+    vector<string> values;
+
+    for(unsigned int i = 0;i<flds.size();i++){
+        values.push_back(getField(flds[i]));
+    }
+    return values;
 }

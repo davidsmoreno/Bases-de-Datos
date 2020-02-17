@@ -16,6 +16,7 @@ public:
 
     void addRegister(vector<string> values);
     void printTable();
+    string getField(string fld);
     vector<string> getFieldsVals(vector<string> flds);
     vector<string> getFieldsWhereEquals(vector<string> otherFields);
     vector<string> getFieldsWhereComparison(vector<string> otherFields, char relation);
